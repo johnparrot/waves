@@ -1,0 +1,32 @@
+.waves {
+    position: relative;
+    overflow: hidden;
+}
+.waves::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.waves .wave {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(209, 209, 209);
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
+    animation: d 0.5s ease-in-out;
+}
+@keyframes d {
+    from {
+        transform: scale(0.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
